@@ -32,6 +32,20 @@
         <input type="checkbox" id="includeUpperCase" />
       </div>
     </section>
+    <section class="character-length">
+      <p>
+        Your passoword will be <span id="charLengthSpan">15</span> characters
+        long
+      </p>
+      <p>move the slider to adjust the length of the passoword</p>
+      <input
+        type="range"
+        id="characterLengthSlider"
+        min="10"
+        max="75"
+        value="15"
+      />
+    </section>
   </div>
   <script src="./scripts/app.js"></script>
   <body>

@@ -9,7 +9,23 @@
   </head>
 
   <div class="container">
-    <div class="lock-logo-div">lock-img</div>
+    <div class="lock-logo-div">
+      <img src="./assets/lock-128.png" alt="lock icon" />
+    </div>
+    <section class="settings-container">
+      <div class="setting">
+        <label for="includeDigits"></label>
+        <span> Include Digits </span>
+        <span></span>
+        <input type="checkbox" id="includeDigits" checked />
+      </div>
+      <div class="setting">
+        <label for="includeSpecialCharacters"></label>
+        <span> Include Special Characters </span>
+        <span></span>
+        <input type="checkbox" id="includeSpecialCharacters" />
+      </div>
+    </section>
   </div>
   <script src="./scripts/app.js"></script>
   <body>

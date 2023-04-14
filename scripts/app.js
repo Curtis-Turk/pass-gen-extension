@@ -7,9 +7,27 @@ const passwordLength = document.querySelector("input[type=range]");
 
 const checkboxes = document.querySelectorAll("input[type=checkbox]");
 
+const generatedPasswordInput = document.querySelector("input[type=text]");
+
 const generatePassword = (length) => {
-  console.log(length);
+  generatedPasswordInput.value = "";
   document.getElementById("charLengthSpan").textContent = length;
+  const includeDigits = document.getElementById("includeDigits").checked;
+  const includeSpecialChar = document.getElementById(
+    "includeSpecialCharacters"
+  ).checked;
+  const includeUpperCase = document.getElementById("includeUpperCase").checked;
+
+  let possPassChars = [...lettersLower];
+
+  if (includeDigits) possPassChars = [...possPassChars, ...numbers];
+  if (includeSpecialChar) possPassChars = [...possPassChars, ...specialChars];
+  if (includeUpperCase) possPassChars = [...possPassChars, ...lettersUpper];
+
+  for (let i = 0; i < length; i++) {
+    generatedPasswordInput.value +=
+      possPassChars[Math.floor(Math.random() * possPassChars.length)];
+  }
 };
 
 passwordLength.addEventListener("change", (e) => {
@@ -18,6 +36,6 @@ passwordLength.addEventListener("change", (e) => {
 
 checkboxes.forEach((checkbox) =>
   checkbox.addEventListener("change", (e) => {
-    console.log("checkbox", passwordLength.value);
+    generatePassword(passwordLength.value);
   })
 );

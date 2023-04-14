@@ -1,0 +1,15 @@
+{
+  "name": "Pass Gen Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "A strong password generator",
+  "icons": {
+    "32": "./assets/lock-32.png",
+    "16": "./assets/lock-64.png",
+    "128": "./assets/lock-128.png"
+  },
+  "action": {
+    "default_icon": "./assets/lock-32.png",
+    "default_popup": "./popup.html"
+  }
+}

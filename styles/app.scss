@@ -20,4 +20,25 @@ body {
   font-size: 16px;
   font-weight: 400;
   background-color: $primary;
+  color: $text-dark;
+  padding: 3rem 0.5rem 0.5rem;
+}
+
+.container {
+  width: 400px;
+  background-color: $white;
+  border-radius: 1rem;
+  padding: 1.5rem 1rem 1rem 1.5rem;
+}
+.lock-logo-div {
+  position: absolute;
+  top: calc($logo-size / -2);
+  left: 1rem;
+  height: $logo-size;
+  width: $logo-size;
+  background-color: $white;
+  border: 6px solid $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

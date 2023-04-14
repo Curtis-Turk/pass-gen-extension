@@ -10,4 +10,26 @@ body {
   font-size: 16px;
   font-weight: 400;
   background-color: #7785fe;
+  color: #616b74;
+  padding: 3rem 0.5rem 0.5rem;
+}
+
+.container {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem 1rem 1rem 1.5rem;
+}
+
+.lock-logo-div {
+  position: absolute;
+  top: -25px;
+  left: 1rem;
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  border: 6px solid #7785fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=app.css.map */

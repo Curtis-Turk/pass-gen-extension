@@ -7,55 +7,52 @@
     <link rel="stylesheet" href="./styles/app.css" />
     <title>Password</title>
   </head>
-
-  <div class="container">
-    <div class="lock-logo-div">
-      <img src="./assets/lock-128.png" alt="lock icon" />
-    </div>
-    <section class="settings-container">
-      <div class="setting">
-        <label for="includeDigits"></label>
-        <span> Include Digits </span>
-        <span></span>
-        <input type="checkbox" id="includeDigits" checked />
-      </div>
-      <div class="setting">
-        <label for="includeSpecialCharacters"></label>
-        <span> Include Special Characters </span>
-        <span></span>
-        <input type="checkbox" id="includeSpecialCharacters" />
-      </div>
-      <div class="setting">
-        <label for="includeUpperCase"></label>
-        <span> Include UpperCase Letters </span>
-        <input type="checkbox" id="includeUpperCase" />
-      </div>
-    </section>
-    <section class="character-length">
-      <p>
-        Your password will be <span id="charLengthSpan">15</span> characters
-        long
-      </p>
-      <p>move the slider to adjust the length of the password</p>
-      <input
-        type="range"
-        id="characterLengthSlider"
-        min="10"
-        max="75"
-        value="15"
-      />
-    </section>
-    <section class="generated-password">
-      <input type="text" id="generatedPassword" spellcheck="false" />
-      <button class="copy-password" id="copyPassword">Copy</button>
-      <div class="confirmation" id="confirmation">
-        <p>Password copied</p>
-      </div>
-    </section>
-  </div>
   <script src="./scripts/app.js"></script>
   <body>
-    <a target="_blank" href="https://icons8.com/icon/KAiiLqQy1c9d/lock">Lock</a>
-    icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+    <div class="container">
+      <div class="lock-logo-div">
+        <img src="./assets/lock-128.png" alt="lock icon" />
+      </div>
+      <section class="settings-container">
+        <div class="setting">
+          <label for="includeDigits"></label>
+          <span> Include Digits </span>
+          <span></span>
+          <input type="checkbox" id="includeDigits" checked />
+        </div>
+        <div class="setting">
+          <label for="includeSpecialCharacters"></label>
+          <span> Include Special Characters </span>
+          <span></span>
+          <input type="checkbox" id="includeSpecialCharacters" />
+        </div>
+        <div class="setting">
+          <label for="includeUpperCase"></label>
+          <span> Include UpperCase Letters </span>
+          <input type="checkbox" id="includeUpperCase" />
+        </div>
+      </section>
+      <section class="character-length">
+        <p>
+          Your password will be <span id="charLengthSpan">15</span> characters
+          long
+        </p>
+        <p>move the slider to adjust the length of the password</p>
+        <input
+          type="range"
+          id="characterLengthSlider"
+          min="10"
+          max="40"
+          value="15"
+        />
+      </section>
+      <section class="generated-password">
+        <input type="text" id="generatedPassword" spellcheck="false" />
+        <button class="copy-password" id="copyPassword">Copy</button>
+        <div class="confirmation" id="confirmation">
+          <p>Password copied</p>
+        </div>
+      </section>
+    </div>
   </body>
 </html>

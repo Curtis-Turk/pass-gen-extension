@@ -9,16 +9,19 @@ const checkboxes = document.querySelectorAll("input[type=checkbox]");
 
 const generatedPasswordInput = document.querySelector("input[type=text]");
 
+const charLengthSpan = document.getElementById("charLengthSpan");
+
 const generatePassword = (length) => {
   generatedPasswordInput.value = "";
-  document.getElementById("charLengthSpan").textContent = length;
+  charLengthSpan.textContent = length;
+
   const includeDigits = document.getElementById("includeDigits").checked;
   const includeSpecialChar = document.getElementById(
     "includeSpecialCharacters"
   ).checked;
   const includeUpperCase = document.getElementById("includeUpperCase").checked;
 
-  let possPassChars = [...lettersLower];
+  let possPassChars = lettersLower;
 
   if (includeDigits) possPassChars = [...possPassChars, ...numbers];
   if (includeSpecialChar) possPassChars = [...possPassChars, ...specialChars];
@@ -39,3 +42,11 @@ checkboxes.forEach((checkbox) =>
     generatePassword(passwordLength.value);
   })
 );
+
+generatePassword(passwordLength.value);
+
+const copyPasswordBtn = document.getElementById("copyPassword");
+const confirmation = document.getElementById("confirmation");
+copyPasswordBtn.addEventListener("click", () => {
+  navigator.clipboard.writeText(generatedPasswordInput.value);
+});

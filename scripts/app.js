@@ -7,16 +7,17 @@ const passwordLength = document.querySelector("input[type=range]");
 
 const checkboxes = document.querySelectorAll("input[type=checkbox]");
 
-const generatePassword = (e) => {
-  console.log(e);
+const generatePassword = (length) => {
+  console.log(length);
+  document.getElementById("charLengthSpan").textContent = length;
 };
 
 passwordLength.addEventListener("change", (e) => {
-  generatePassword(e);
+  generatePassword(e.target.value);
 });
 
 checkboxes.forEach((checkbox) =>
   checkbox.addEventListener("change", (e) => {
-    console.log("checkbox", e);
+    console.log("checkbox", passwordLength.value);
   })
 );

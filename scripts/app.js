@@ -49,4 +49,8 @@ const copyPasswordBtn = document.getElementById("copyPassword");
 const confirmation = document.getElementById("confirmation");
 copyPasswordBtn.addEventListener("click", () => {
   navigator.clipboard.writeText(generatedPasswordInput.value);
+  confirmation.classList.add("active");
+  setTimeout(() => {
+    confirmation.classList.remove("active");
+  }, 2000);
 });

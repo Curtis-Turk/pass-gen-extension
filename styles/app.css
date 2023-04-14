@@ -23,13 +23,102 @@ body {
 
 .lock-logo-div {
   position: absolute;
-  top: -25px;
+  top: 26.6666666667px;
   left: 1rem;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   background-color: #fff;
-  border: 6px solid #7785fe;
+  border: 3px solid #7785fe;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
+}
+.lock-logo-div img {
+  width: 1.5rem;
+}
+
+section.character-length {
+  margin: 3rem auto 2rem;
+  text-align: center;
+}
+section.character-length p:first-of-type {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+section.character-length p:first-of-type span {
+  color: #7785fe;
+  font-size: 1rem;
+}
+section.character-length p:last-of-type {
+  margin: 0.5rem auto 1rem;
+  font-size: 0.6rem;
+  color: #8e9ba7;
+}
+section.character-length input[type=range] {
+  width: 100%;
+}
+
+section.generated-password {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+section.generated-password input,
+section.generated-password button {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  height: 3rem;
+}
+section.generated-password input {
+  width: 100%;
+  border-radius: 0.5rem 0 0 0.5rem;
+  border: 1px solid #cccfd3;
+  border-right: none;
+  background-color: #f5f5f5;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  font-size: 1rem;
+  color: #465059;
+  outline: none;
+}
+section.generated-password button {
+  height: 3rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #465059;
+  background-color: transparent;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+section.generated-password button:hover {
+  background-color: #f5f5f5;
+}
+section.generated-password .confirmation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.1s ease;
+}
+section.generated-password .confirmation p {
+  transform: scale(0.2);
+  transition: transform 0.3s ease;
+}
+section.generated-password .confirmation.active {
+  pointer-events: all;
+  opacity: 1;
+}
+section.generated-password .confirmation.active p {
+  transform: scale(1.1);
 }/*# sourceMappingURL=app.css.map */
